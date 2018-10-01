@@ -20,7 +20,5 @@ public class SampleController {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleController.class, args);
-        System.out.println("Mason push test 1");
-        System.out.println("Mason push test");
     }
 }
