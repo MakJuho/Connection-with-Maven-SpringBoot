@@ -39,4 +39,14 @@ public class SampleController {
     private static int calcUserMoney(int userMoney, int totalPrice){
         return userMoney - totalPrice;
     }
+
+    private static void printMenu(){
+        System.out.println("---------------------------");
+        System.out.println("1.콜라 1000");
+        System.out.println("2.환타 1500");
+        System.out.println("3.사이다 1300");
+        System.out.println("4.포카리스웨트 1000");
+        System.out.println("5.조지아 1600");
+        System.out.println("---------------------------");
+    }
 }
