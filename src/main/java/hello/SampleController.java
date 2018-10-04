@@ -5,6 +5,7 @@ import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
+import java.util.Scanner;
 
 @Controller
 @EnableAutoConfiguration
@@ -20,17 +21,45 @@ public class SampleController {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleController.class, args);
-      
-        System.out.println("Mason push test 1");
-        System.out.println("output test");
+
+        Scanner in = new Scanner(System.in);
+        boolean end = false;
 
         // calcUserMoney method test
-        int userMoney = 1000;
-        int totalPrice = 1500;
-        int calcMoney = calcUserMoney(userMoney, totalPrice);
-        System.out.println("userMoney: " + userMoney + ", totalPrice: " + totalPrice);
-        System.out.println("after calculate");
-        System.out.println("price: " + calcMoney);
+//        int userMoney = 1000;
+//        int totalPrice = 1500;
+//        int calcMoney = calcUserMoney(userMoney, totalPrice);
+//        System.out.println("userMoney: " + userMoney + ", totalPrice: " + totalPrice);
+//        System.out.println("after calculate");
+//        System.out.println("price: " + calcMoney);
+        int button;
+        while (!end) {
+            printMenu();
+            button = in.nextInt();
+            if (button = 1) {
+
+            }
+            else if (buttonn = 2) {
+
+            }
+            else if (button = 3) {
+
+            }
+            else if (button = 4) {
+
+            }
+            else if (button = 0) {
+                end = true;
+                System.out.println("이용해주셔서 감사합니다.");
+            }
+            else {
+                System.out.println("올바른 명령어를 입력하세요");
+            }
+
+        }
+
+
+
     }
 
     /*
@@ -56,5 +85,6 @@ public class SampleController {
     public static int calcTotalPrice(int price, int number){
 
         return price*number;
+
     }
 }
