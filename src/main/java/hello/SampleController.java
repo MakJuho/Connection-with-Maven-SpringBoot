@@ -21,6 +21,7 @@ public class SampleController {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleController.class, args);
+
         Scanner in = new Scanner(System.in);
         boolean end = false;
 
@@ -72,12 +73,18 @@ public class SampleController {
     }
 
     private static void printMenu(){
-        System.out.println("----------------------------------------------------");
+        System.out.println("---------------------------");
         System.out.println("1.콜라 1000");
-        System.out.println("2.사이다 900");
-        System.out.println("3.환타 700");
-        System.out.println("4.포카라 스웨트 900");
-        System.out.println("5.조지아 800");
-        System.out.println("----------------------------------------------------");
+        System.out.println("2.환타 1500");
+        System.out.println("3.사이다 1300");
+        System.out.println("4.포카리스웨트 1000");
+        System.out.println("5.조지아 1600");
+        System.out.println("---------------------------");
+    }
+
+    public static int calcTotalPrice(int price, int number){
+
+        return price*number;
+
     }
 }
