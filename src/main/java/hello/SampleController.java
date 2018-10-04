@@ -20,5 +20,23 @@ public class SampleController {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleController.class, args);
+
+        // calcUserMoney method test
+        int userMoney = 1000;
+        int totalPrice = 1500;
+        int calcMoney = calcUserMoney(userMoney, totalPrice);
+        System.out.println("userMoney: " + userMoney + ", totalPrice: " + totalPrice);
+        System.out.println("after calculate");
+        System.out.println("price: " + calcMoney);
+    }
+
+    /*
+     * calculate userMoney and totalPrice Method
+     * if userMoney bigger than totalPrice, return positive numbers
+     * else return negative numbers.
+    */
+
+    private static int calcUserMoney(int userMoney, int totalPrice){
+        return userMoney - totalPrice;
     }
 }
