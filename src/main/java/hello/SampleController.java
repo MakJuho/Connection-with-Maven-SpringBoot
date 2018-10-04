@@ -20,6 +20,9 @@ public class SampleController {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleController.class, args);
+      
+        System.out.println("Mason push test 1");
+        System.out.println("output test");
 
         // calcUserMoney method test
         int userMoney = 1000;
@@ -48,5 +51,10 @@ public class SampleController {
         System.out.println("4.포카리스웨트 1000");
         System.out.println("5.조지아 1600");
         System.out.println("---------------------------");
+    }
+
+    public static int calcTotalPrice(int price, int number){
+
+        return price*number;
     }
 }
