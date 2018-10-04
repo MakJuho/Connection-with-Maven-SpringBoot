@@ -23,4 +23,9 @@ public class SampleController {
         System.out.println("Mason push test 1");
         System.out.println("output test");
     }
+
+    public static int calcTotalPrice(int price, int number){
+
+        return price*number;
+    }
 }
