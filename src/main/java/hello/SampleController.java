@@ -26,30 +26,42 @@ public class SampleController {
         boolean end = false;
 
         // calcUserMoney method test
-//        int userMoney = 1000;
-//        int totalPrice = 1500;
+        int userMoney = 10000;
+        int totalPrice = 0;
 //        int calcMoney = calcUserMoney(userMoney, totalPrice);
 //        System.out.println("userMoney: " + userMoney + ", totalPrice: " + totalPrice);
 //        System.out.println("after calculate");
 //        System.out.println("price: " + calcMoney);
         int button;
+        System.out.println("사용자가 가지고 있는 액수 : " + userMoney);
+
         while (!end) {
             printMenu();
             button = in.nextInt();
-            if (button = 1) {
-
-            }
-            else if (buttonn = 2) {
-
-            }
-            else if (button = 3) {
-
-            }
-            else if (button = 4) {
-
-            }
-            else if (button = 0) {
+            printMenu();
+            if (userMoney < 0) {
+                System.out.println("액수가 부족합니다.");
                 end = true;
+            }
+            if (button == 1) {
+                totalPrice += calcTotalPrice(1000, 1);
+                userMoney = calcUserMoney(userMoney, totalPrice);
+            }
+            else if (buttonn == 2) {
+                totalPrice += calcTotalPrice(1500, 1);
+                userMoney = calcUserMoney(userMoney, totalPrice);
+            }
+            else if (button == 3) {
+                totalPrice += calcTotalPrice(1300, 1);
+                userMoney = calcUserMoney(userMoney, totalPrice);
+            }
+            else if (button == 4) {
+                totalPrice += calcTotalPrice(1000, 1);
+                userMoney = calcUserMoney(userMoney, totalPrice);
+            }
+            else if (button == 0) {
+                end = true;
+                System.out.println("구매금액 : " + totalPrice + " 잔액 : " + userMoney);
                 System.out.println("이용해주셔서 감사합니다.");
             }
             else {
@@ -68,7 +80,7 @@ public class SampleController {
      * else return negative numbers.
     */
 
-    private static int calcUserMoney(int userMoney, int totalPrice){
+    private static int calcUserMoney(int userMoney, int totalPrice) {
         return userMoney - totalPrice;
     }
 
